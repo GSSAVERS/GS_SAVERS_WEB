@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAVERS — Conectando Pessoas, Salvando Vidas</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Para alinhar exatamente seis cards em uma única linha na seção "Objetivos",
+    adicionamos esta regra extra abaixo. Se você já tiver uma classe `.cards-container`
+    no seu CSS, basta sobrescrever o número de colunas para 6.
+  -->
+  <style>
+    /* Força seis colunas na grade de cards da seção Objetivos */
+    #objetivos .cards-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="header">
+    <div class="logo-container">
+      <!-- Substitua "sua-logo-aqui.png" pelo caminho real da sua logo -->
+      <img src="ChatGPTImage28demai.de2025211219.png" alt="Logo Savers" class="logo-img" />
+      <div class="logo-text-block">
+        <span class="logo-title">SAVERS</span>
+        <span class="logo-subtitle">Conectando Pessoas, Salvando Vidas</span>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" data-target="hero">Início</a></li>
+        <li><a href="#" data-target="problemas">Problemas</a></li>
+        <li><a href="#" data-target="objetivos">Objetivos</a></li>
+        <li><a href="#" data-target="solucao">Solução</a></li>
+        <li><a href="#" data-target="publico-alvo">Público alvo</a></li>
+        <li><a href="#" data-target="beneficio">Benefício</a></li>
+        <li><a href="#" data-target="funcionalidades-principais">Funcionalidades principais</a></li>
+        <li><a href="#" data-target="contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION (IMAGEM DE FUNDO) ========== -->
+  <section id="hero" class="hero">
+    <!-- A imagem de fundo será aplicada via CSS (background-image em .hero) -->
+    <div class="hero-overlay">
+      <div class="hero-text-container">
+        <h1>Enchentes no Brasil</h1>
+        <p>
+          Enchentes devastadoras são uma realidade frequente no Brasil, especialmente em áreas
+          urbanas densamente povoadas. Essas enchentes causam grandes danos materiais e humanos,
+          isolando comunidades inteiras.
+        </p>
+        <p>
+          Em 2024, no Rio Grande do Sul, o país testemunhou uma das maiores tragédias climáticas
+          de sua história recente. Nesse cenário caótico, a falta de estrutura formal expôs a
+          importância de uma resposta organizada e comunitária. É aí que o SAVERS entra em ação.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+  <main class="main-content">
+    <!-- ========== SEÇÃO PROBLEMAS ========== -->
+    <section id="problemas" class="section">
+      <h2>Problemas</h2>
+      <p>
+        Aqui você descreve quais são os principais problemas que o SAVERS visa resolver. (Conteúdo de exemplo.)
+      </p>
+    </section>
+
+       <!-- ========== SEÇÃO OBJETIVOS (com ícones) ========== -->
+    <section id="objetivos" class="objetivos-section">
+      <!-- Camada de fundo opcional (imagem ou overlay semitransparente) -->
+      <div class="objetivos-background">
+        <!-- Se quiser usar uma imagem de fundo, comente o background-color no CSS e use:
+             <img src="sua-imagem-de-fundo-objetivos.jpg" alt="Fundo Objetivos" /> -->
+      </div>
+
+      <div class="objetivos-content">
+        <!-- Texto introdutório -->
+        <div class="objetivos-text">
+          <h2>Objetivos</h2>
+          <p>
+            A proposta do Savers é guiada por um conjunto de objetivos estratégicos que
+            buscam transformar a maneira como as comunidades respondem às enchentes e
+            outras situações emergenciais:
+          </p>
+        </div>
+
+        <!-- Grade de cards (2 linhas × 3 colunas) -->
+        <div class="cards-container">
+          <!-- 1º card com ícone “chat” -->
+          <div class="objetivo-card">
+            <div class="card-icon">
+              <!-- Substitua "sua-pasta/chat.png" pelo caminho real do ícone de chat -->
+              <img src="CHAT.png" alt="Ícone Mensagem" />
+            </div>
+            <p>
+              Oferecer uma resposta rápida e organizada durante emergências: Tornar possível
+              a mobilização imediata de voluntários, recursos e informações assim que uma enchente
+              atinge determinada região, reduzindo o tempo de resposta.
+            </p>
+          </div>
+
+          <!-- 2º card com ícone “pessoa” -->
+          <div class="objetivo-card">
+            <div class="card-icon">
+              <!-- Substitua "sua-pasta/pessoa.png" pelo caminho real do ícone de pessoa -->
+              <img src="PESSOA.png" alt="Ícone Pessoa" />
+            </div>
+            <p>
+              Garantir segurança para vítimas e voluntários: Criar mecanismos que protejam a integridade
+              física dos envolvidos nas operações, orientando e limitando ações de risco individual.
+            </p>
+          </div>
+
+          <!-- 3º card com ícone “banco” -->
+          <div class="objetivo-card">
+            <div class="card-icon">
+              <!-- Substitua "sua-pasta/banco.png" pelo caminho real do ícone de banco de dados -->
+              <img src="BANCO_.png" alt="Ícone Banco de Dados" />
+            </div>
+            <p>
+              Otimizar o uso dos recursos comunitários: Evitar desperdícios e sobrecargas, direcionando
+              alimentos, água, roupas e medicamentos para quem realmente precisa, com base em dados atualizados.
+            </p>
+          </div>
+
+          <!-- 4º card com ícone “mapa” -->
+          <div class="objetivo-card">
+            <div class="card-icon">
+              <!-- Substitua "sua-pasta/mapa.png" pelo caminho real do ícone de mapa -->
+              <img src="MAPA.png" alt="Ícone Mapa" />
+            </div>
+            <p>
+              Fortalecer o espírito de solidariedade e colaboração local: Engajar a população de forma ativa,
+              conectando quem precisa de ajuda com quem pode ajudar de maneira segura, empática e estruturada.
+            </p>
+          </div>
+
+          <!-- 5º card com ícone “localização” -->
+          <div class="objetivo-card">
+            <div class="card-icon">
+              <!-- Substitua "sua-pasta/localizacao.png" pelo caminho real do ícone de localização -->
+              <img src="localização.png" alt="Ícone Localização" />
+            </div>
+            <p>
+              Aumentar a precisão das informações: Usar tecnologia para coletar e atualizar informações sobre
+              as condições locais e necessidades da população, apoiando decisões mais assertivas.
+            </p>
+          </div>
+
+    <!-- ========== SEÇÃO SOLUÇÃO ========== -->
+    <section id="solucao" class="section">
+      <h2>Solução</h2>
+      <p>
+        Explique como o SAVERS funciona para mitigar enchentes e auxiliar voluntários. (Conteúdo de exemplo.)
+      </p>
+    </section>
+
+    <!-- ========== SEÇÃO PÚBLICO ALVO ========== -->
+    <section id="publico-alvo" class="section">
+      <h2>Público alvo</h2>
+      <p>
+        Descreva quem será impactado pelo SAVERS. (Conteúdo de exemplo.)
+      </p>
+    </section>
+
+    <!-- ========== SEÇÃO BENEFÍCIO ========== -->
+    <section id="beneficio" class="section">
+      <h2>Benefício</h2>
+      <p>
+        Mostre quais benefícios o usuário/voluntário terá ao usar o SAVERS. (Conteúdo de exemplo.)
+      </p>
+    </section>
+
+    <!-- ========== SEÇÃO FUNCIONALIDADES PRINCIPAIS ========== -->
+    <section id="funcionalidades-principais" class="section">
+      <h2>Funcionalidades principais</h2>
+      <p>
+        Liste as principais funcionalidades do SAVERS, como cadastro de voluntários, mapeamento de ocorrências, etc. (Conteúdo de exemplo.)
+      </p>
+    </section>
+
+    <!-- ========== SEÇÃO CONTATO ========== -->
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p>
+        Deixe aqui informações de contato ou um pequeno formulário para captar leads. (Conteúdo de exemplo.)
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

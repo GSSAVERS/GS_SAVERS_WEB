@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   color: #333;
-  background-color: #fafafa;
+  background-color: #b3b3b3;
 }
 
 /* ========== CABEÇALHO ========== */
@@ -77,7 +77,7 @@ body {
   position: relative;
   width: 100%;
   height: 70vh; /* Ajuste conforme desejar: pode ser 60vh, 80vh, etc. */
-  background-image: url('Desktop_-_7[1].png'); /* Aqui você indica onde colocar sua imagem de fundo */
+  background-image: url('SAVERS.png'); /* Aqui você indica onde colocar sua imagem de fundo */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -255,6 +255,296 @@ body {
   }
 }
 
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Solução */
+/* ============================= */
+
+.solucao-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.solucao-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.solucao-cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.solucao-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.solucao-card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.solucao-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.solucao-card-text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.solucao-card-text p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Público Alvo */
+/* ============================= */
+
+.publico-alvo-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.publico-alvo-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #111;
+}
+
+.publico-alvo-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+
+.publico-alvo-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.publico-alvo-card-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.publico-alvo-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.publico-alvo-card-text h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.publico-alvo-card-text p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Benefícios */
+/* ============================= */
+
+.beneficio-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.beneficio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.beneficio-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.beneficio-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.beneficio-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Funcionalidades */
+/* ============================= */
+
+.funcionalidades-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.funcionalidades-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #111;
+}
+
+.funcionalidades-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.funcionalidade-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.funcionalidade-card-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.funcionalidade-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.funcionalidade-card-text h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.funcionalidade-card-text p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Contato */
+/* ============================= */
+
+.contato-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.contato-section h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  color: #333;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contato-item {
+  text-align: left;
+  flex: 1;
+}
+
+.contato-item p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contato-form {
+  flex: 1;
+  text-align: left;
+}
+
+.contato-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.contato-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contato-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.contato-form button:hover {
+  background-color: #0062a3;
+}
 
 /* Responsividade (exemplo simples) */
 @media (max-width: 768px) {
@@ -269,5 +559,41 @@ body {
   }
   .section {
     padding: 3rem 1rem;
+  }
+  
+  /* Responsividade para Solução */
+  .solucao-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Responsividade para Público Alvo */
+  .publico-alvo-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Responsividade para Funcionalidades */
+  .funcionalidades-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Responsividade para Contato */
+  .contato-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .solucao-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

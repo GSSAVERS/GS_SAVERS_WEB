@@ -222,7 +222,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+  width: 98vw;
   max-width: 100vw;
 
   background-color: #bbbbbb;
@@ -319,9 +319,9 @@ body {
 
   /* Se quiser que ocupe metade da tela (50vw) e fique centralizado: */
   width: 60vw;
-  max-width: 100vw;
+  max-width: 90vw;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 35%;
 
   /* Visual */
   border-radius: 50px;
@@ -444,7 +444,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+  width: 98vw;
   max-width: 100vw;
 
   background-color: #ffffff;  /* fundo branco para o bloco inteiro */
@@ -540,8 +540,8 @@ body {
 
 /* Ícone grande (por exemplo, 120x120 ou 150x150 conforme ajuste) */
 .alerta-icon {
-  width: 120px;    /* ajuste para 120px, 150px ou 200px, conforme preferir */
-  height: 120px;
+  width: 50px;    /* ajuste para 120px, 150px ou 200px, conforme preferir */
+  height: 50px;
   margin: 0;       /* Sem margin-right extra porque usamos gap */
 }
 

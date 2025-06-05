@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="62" viewBox="0 0 70 62" fill="none">
+  <!-- Triângulo com cantos arredondados -->
+  <polygon points="35,5 65,57 5,57" fill="white" stroke="black" stroke-width="6" stroke-linejoin="round"></polygon>
+  <!-- Ponto de interrogação no centro, com curvas mais suaves -->
+  <path d="
+      M35 18
+      C32 18 32 22 35 22
+      C38 22 38 26 35 26
+      L35 30
+    " fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- O ponto do "?" -->
+  <circle cx="35" cy="38" r="3" fill="black"></circle>
+</svg>

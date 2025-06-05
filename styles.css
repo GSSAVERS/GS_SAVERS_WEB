@@ -637,82 +637,141 @@ body {
 }
 
 /* ============================= */
-/* ESTILOS ESPECÍFICOS: Contato */
+/* ESTILOS ESPECÍFICOS: Contato  */
 /* ============================= */
 .contato-section {
-  background-color: #f5f5f5;
-  padding: 4rem 2rem;
+  background-color: #e0e0e0;  /* cinza claro no fundo */
+  padding: 3rem 2rem;         /* reduzir um pouco o padding para ficar mais “compacto” */
   border-radius: 1rem;
   margin: 2rem 0;
-  text-align: center;
+  text-align: left;
+  height: 30vw;           /* texto todo alinhado à esquerda */
 }
 
 .contato-section h2 {
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 1.25rem;
+  font-weight: 600;
   max-width: 900px;
-  margin: 0 auto 3rem;
-  color: #333;
+  margin: 0 auto 2rem;        /* centraliza horizontalmente e dá 2rem de espaço embaixo */
+  color: #222;
+  line-height: 1.4;
 }
 
+/* Container flex principal: duas colunas */
 .contato-info {
   display: flex;
-  justify-content: space-between;
   gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;             /* centraliza a área de contato dentro da seção */
 }
 
+/* ========== COLUNA DA ESQUERDA (DADOS DE CONTATO) ========== */
 .contato-item {
-  text-align: left;
-  flex: 1;
+  flex: 1;                     /* ocupa metade do espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
 }
 
 .contato-item p {
-  margin-bottom: 0.75rem;
   font-size: 1rem;
-  color: #444;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* ========== COLUNA DA DIREITA (FEEDBACK) ========== */
 .contato-form {
-  flex: 1;
-  text-align: left;
-}
-
-.contato-form form {
+  flex: 1;                     /* ocupa a outra metade do espaço */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
 
-.contato-form input,
-.contato-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  font-family: inherit;
-}
-
-.contato-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contato-form button {
-  padding: 0.75rem 1.5rem;
-  background-color: #007ACC;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
+/* Rótulo “Envie um feedback:” */
+.contato-form label {
+  font-size: 1rem;
   font-weight: 500;
-  transition: background-color 0.2s;
-  align-self: flex-start;
+  color: #222;
 }
 
-.contato-form button:hover {
-  background-color: #0062a3;
+/* Bloco branco arredondado envolvendo textarea e botão */
+.feedback-box {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2rem;         /* bordas muito arredondadas para formar “pílula” */
+  padding: 0.5rem 1rem;        /* espaço interno, vertical:0.5rem, horizontal:1rem */
+  display: flex;
+  align-items: center;
 }
+
+/* A própria textarea interna */
+.contato-form textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  padding-right: 2.5rem;       /* espaço para não bater no botão */
+  min-height: 3rem;            /* altura mínima para ficar “chatinha” como no exemplo */
+}
+
+/* Botão de enviar (ícone) posicionado sobre a borda direita do .feedback-box */
+.contato-form button {
+  position: absolute;
+  right: 1rem;                 /* distancia 1rem da borda direita do .feedback-box */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #666;
+  transition: color 0.2s;
+}
+
+/* Ao passar o mouse sobre o ícone, fica um pouco mais escuro */
+.contato-form button:hover {
+  color: #333;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE PARA “Contato”  */
+/* ============================= */
+@media (max-width: 768px) {
+  .contato-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contato-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-section {
+    padding: 2rem 1rem;
+  }
+  .contato-section h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .contato-item p {
+    font-size: 0. ninerem;
+  }
+  .contato-form label {
+    font-size: 0. ninerem;
+  }
+  .contato-form textarea {
+    font-size: 0. ninerem;
+  }
+}
+
 
 /* ============================= */
 /* RESPONSIVIDADE GERAL          */

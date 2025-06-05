@@ -4,11 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   color: #333;
-  background-color: #fafafa;
+  background-color: #757575;
 }
 
 /* ========== CABEÇALHO ========== */
@@ -17,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #e5e5e5; /* Cinza-claro para se aproximar do print */
+  background-color: #e5e5e5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -76,8 +77,8 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 70vh; /* Ajuste conforme desejar: pode ser 60vh, 80vh, etc. */
-  background-image: url('Desktop_-_7[1].png'); /* Aqui você indica onde colocar sua imagem de fundo */
+  height: 70vh;
+  background-image: url('src/SAVERS.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,19 +90,18 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Overlay levemente escuro para destacar o texto */
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 2rem;
 }
 
 .hero-text-container {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 800px;
-  margin: 1rem;
+  max-width: 900px;
 }
 
 .hero-text-container h1 {
@@ -124,7 +124,6 @@ body {
   margin: 0 auto;
 }
 
-/* Cada seção */
 .section {
   padding: 4rem 1rem;
   border-bottom: 1px solid #e0e0e0;
@@ -144,7 +143,6 @@ body {
   text-align: justify;
 }
 
-/* Última seção (remover borda inferior) */
 .section:last-of-type {
   border-bottom: none;
   padding-bottom: 6rem;
@@ -153,110 +151,558 @@ body {
 /* ============================= */
 /* ESTILOS ESPECÍFICOS: Objetivos */
 /* ============================= */
-
-/* 1) CONTAINERS GLOBAIS */
 .objetivos-section {
   position: relative;
-  overflow: hidden;
-  margin-top: 2rem; /* espaçamento entre a seção anterior e esta */
-}
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 100vw;
 
-/* Background de toda a seção (pode ser imagem ou cor semitransparente) */
-.objetivos-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Se você quiser um overlay com semi-transparência:
-     background-color: rgba(0, 0, 0, 0.2); 
-     
-     Ou, se preferir uma imagem de fundo, comente a linha acima e
-     descomente a linha abaixo, trocando "sua-imagem-aqui.jpg" pelo arquivo real:
+  background-color: #f0f0f0;
+  border-radius: 1.5rem;
 
-  background-image: url('sua-imagem-de-fundo-objetivos.jpg');
-  background-size: cover;
-  background-position: center;
-  */
-}
+  padding: 3rem 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
-/* 2) CONTEÚDO (texto e cards) */
-.objetivos-content {
-  position: relative; /* para ficar acima de .objetivos-background */
-  z-index: 1;
-  padding: 4rem 2rem; /* ajuste conforme preferir */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 3rem; /* distância entre texto e cards */
+  align-items: flex-start;
 }
 
-/* 2.1) TEXTO INTRODUTÓRIO */
-.objetivos-text {
-  max-width: 1000px;
-  text-align: center; /* centraliza o texto */
-}
-
-.objetivos-text h2 {
-  font-size: 2rem;
+.objetivos-section h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
   margin-bottom: 1rem;
-  color: #111; /* cor escura para contrastar */
+  color: #000;
+  text-align: left;
+  width: 100%;
 }
 
-.objetivos-text p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #222;
-  text-align: justify;
-  max-width: 900px;
+.objetivos-intro {
+  font-size: 0.98rem;
+  color: #000;
+  text-align: left;
+  margin-bottom: 1.8rem;
+  line-height: 1.5;
+  max-width: 1100px;
 }
 
-/* 3) GRADE DE CARDS */
-.cards-container {
+.objetivos-cards-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 2rem;
   width: 100%;
   max-width: 1200px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  margin: 0 auto;
 }
 
-/* 4) CADA CARD INDIVIDUAL */
 .objetivo-card {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 220px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .objetivo-card p {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Nossa Solução */
+/* ============================= */
+.solucao-section {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 100vw;
+
+  background-color: #bbbbbb;
+  border-radius: 1rem;
+
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.solucao-section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #111;
+  text-align: left;
+  width: 100%;
+}
+
+.solucao-section p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.6;
+  max-width: 1100px;
+  margin-bottom: 2rem;
+}
+
+/* Container branco que envolve os 5 cards */
+.solucao-cards-container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.solucao-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  flex: 1;
+  min-height: 240px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.solucao-card-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.25rem;
+}
+
+.solucao-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.solucao-card-text h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.solucao-card-text p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Público Alvo */
+/* ============================= */
+.publico-alvo-section {
+  position: relative;
+  right: 45%;
+  width: 50vw;
+  max-width: 100vw;
+  border-radius: 50px;
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.publico-alvo-section h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* “Grande card” branco que envolve os 4 cartões */
+.publico-alvo-cards-container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  max-width: 1000px;
+  width: calc(100% - 4rem);
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.publico-alvo-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.publico-alvo-card-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.publico-alvo-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.publico-alvo-card-text h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.publico-alvo-card-text p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Benefícios */
+/* ============================= */
+.beneficio-section {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  border-radius: 50px;
+  margin: 2rem 0;
+  left: 40%;
+}
+
+.beneficio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.beneficio-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.beneficio-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.beneficio-card p {
   font-size: 1rem;
   color: #333;
-  line-height: 1.5;
-  text-align: justify;
+  margin-bottom: 0;
 }
 
-/* 5) RESPONSIVIDADE (opcional) */
-@media (max-width: 768px) {
-  .objetivos-content {
-    padding: 3rem 1rem;
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Funcionalidades */
+/* ============================= */
+.funcionalidades-section {
+  /* ======================================================
+     Faz o bloco branco ocupar 100% da largura da viewport
+     e centraliza-o horizontalmente, mantendo o border-radius
+     quase colado à borda da tela.
+  ====================================================== */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 100vw;
+
+  background-color: #ffffff;  /* fundo branco para o bloco inteiro */
+  border-radius: 1rem;        /* cantos arredondados em todo o bloco */
+  padding: 2rem 2rem 3rem;    /* 2rem topo e laterais, 3rem embaixo */
+  margin: 2rem 0;             /* espaçamento acima/abaixo em relação às outras seções */
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro do bloco branco — colado no topo, mas com 2rem de margem esquerda */
+.funcionalidades-section h2 {
+  font-size: 2rem;
+  margin: 0 0 2rem 2rem;   /* 2rem de recuo na esquerda, 2rem de espaçamento abaixo */
+  color: #111;
+  text-align: left;
+}
+
+/* Container de cards, em grid de duas colunas */
+.funcionalidades-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  /* Para que o grid não fique colado demais do lado esquerdo,
+     adicionamos 2rem de padding interno (já definido no .funcionalidades-section).
+     Aqui, basta garantir que o grid ocupe 100% disponível. */
+  width: 100%;
+  padding: 0 2rem;  /* 2rem de recuo interno somente nas laterais do grid */
+}
+
+/* Cada cartão */
+.funcionalidade-card {
+  background-color: #f9f9f9;  /* leve cinza para contrastar dentro do branco */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Ícone de cada cartão */
+.funcionalidade-card-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.funcionalidade-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Texto dentro do cartão */
+.funcionalidade-card-text h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+/* ============================================= */
+/*  Cartão específico: Alerta de Emergência em coluna */
+/* ============================================= */
+/*
+   No seu HTML, encontre o cartão “Alerta de Emergência” e troque:
+      <div class="funcionalidade-card"> 
+   por:
+      <div class="funcionalidade-card alerta-card">
+  
+   Além disso, dentro dele troque:
+      <div class="funcionalidade-card-icon">
+      …
+      </div>
+   por:
+      <div class="funcionalidade-card-icon alerta-icon">
+      …
+      </div>
+
+   Dessa forma, o CSS abaixo só se aplica a esse cartão específico.
+*/
+.alerta-card {
+  /* Continua sendo um flex container, mas agora alinhado ao topo */
+  display: flex;
+  flex-direction: row;       /* Mantém o ícone à esquerda e o texto à direita */
+  align-items: flex-start;   /* Alinha ícone e texto ao topo do cartão */
+  gap: 1rem;                 /* Espaço entre ícone e texto */
+
+  /* O padding interno já vem de .funcionalidade-card, então não há necessidade de repetir */
+}
+
+/* Ícone grande (por exemplo, 120x120 ou 150x150 conforme ajuste) */
+.alerta-icon {
+  width: 120px;    /* ajuste para 120px, 150px ou 200px, conforme preferir */
+  height: 120px;
+  margin: 0;       /* Sem margin-right extra porque usamos gap */
+}
+
+.alerta-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Se quiser elevar ainda mais o texto, pode usar margin-top negativo:
+   .alerta-card .funcionalidade-card-text {
+     margin-top: -8px;
+   }
+   Mas, em geral, o align-items: flex-start já alinha ao topo.
+*/
+
+/* ============================= */
+/* RESPONSIVIDADE               */
+/* ============================= */
+
+/* Em telas médias (abaixo de 992px), quebra para 1 coluna */
+@media (max-width: 992px) {
+  .funcionalidades-section {
+    /* Mantém o bloco branco esticado até as bordas, mas garante recuo interno menor */
+    padding: 1.5rem 1.5rem 2.5rem;
   }
-  .objetivos-text h2 {
-    font-size: 1.75rem;
+  .funcionalidades-section h2 {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
   }
-  .objetivos-text p {
+  .funcionalidades-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding: 0 1.5rem;  /* recuo interno reduzido */
+  }
+}
+
+/* Em telas bem estreitas (abaixo de 576px), recuos internos ainda menores */
+@media (max-width: 576px) {
+  .funcionalidades-section {
+    padding: 1rem 1rem 2rem;
+  }
+  .funcionalidades-section h2 {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+  .funcionalidades-cards-container {
+    padding: 0 1rem;
+    grid-gap: 1rem;
+  }
+  .funcionalidade-card {
+    padding: 1rem;
+  }
+  .funcionalidade-card-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+  }
+  .funcionalidade-card-text h3 {
     font-size: 1rem;
   }
-  .cards-container {
-    grid-template-columns: 1fr; /* em telas pequenas, um card por linha */
-    grid-gap: 1.5rem;
-  }
-  .objetivo-card {
-    padding: 1.5rem;
+  .funcionalidade-card-text p {
+    font-size: 0.825rem;
   }
 }
 
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Contato */
+/* ============================= */
+.contato-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
 
-/* Responsividade (exemplo simples) */
+.contato-section h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  color: #333;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contato-item {
+  text-align: left;
+  flex: 1;
+}
+
+.contato-item p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contato-form {
+  flex: 1;
+  text-align: left;
+}
+
+.contato-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.contato-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contato-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.contato-form button:hover {
+  background-color: #0062a3;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE GERAL          */
+/* ============================= */
+@media (max-width: 992px) {
+  .objetivos-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .solucao-cards-container {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .solucao-card {
+    flex: 0 0 calc(50% - 1.5rem);
+  }
+  .funcionalidades-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .publico-alvo-cards-container {
+    grid-template-columns: 1fr;
+    max-width: calc(100% - 4rem);
+    width: calc(100% - 4rem);
+  }
+  .contato-info {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-text-container {
     padding: 1.5rem;
@@ -269,5 +715,81 @@ body {
   }
   .section {
     padding: 3rem 1rem;
+  }
+  .objetivos-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .solucao-section {
+    padding: 3rem 1.5rem;
+  }
+  .solucao-section h2 {
+    font-size: 1.7rem;
+  }
+  .solucao-section p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .solucao-card {
+    flex: 0 0 calc(50% - 1.5rem);
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+  .solucao-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  .solucao-card-text h3 {
+    font-size: 1rem;
+  }
+  .solucao-card-text p {
+    font-size: 0.85rem;
+  }
+  .publico-alvo-section h2 {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .solucao-card {
+    flex: 0 0 100%;
+    min-height: 180px;
+  }
+  .solucao-card-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+  .solucao-card-text h3 {
+    font-size: 0.95rem;
+  }
+  .solucao-card-text p {
+    font-size: 0.8rem;
+  }
+  .publico-alvo-cards-container {
+    padding: 1.5rem;
+    max-width: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    grid-gap: 1rem;
+  }
+  .publico-alvo-section h2 {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+  .publico-alvo-card {
+    padding: 1rem;
+  }
+  .publico-alvo-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+  .publico-alvo-card-text h3 {
+    font-size: 1rem;
+  }
+  .publico-alvo-card-text p {
+    font-size: 0.825rem;
   }
 }

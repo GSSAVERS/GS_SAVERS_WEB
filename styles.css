@@ -6,6 +6,10 @@
 }
 
 body {
+  background-image: url(src/Desktop\ -\ 18.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   color: #333;

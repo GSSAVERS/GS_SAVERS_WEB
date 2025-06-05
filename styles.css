@@ -314,16 +314,26 @@ body {
 /* ESTILOS ESPECÍFICOS: Público Alvo */
 /* ============================= */
 .publico-alvo-section {
-  position: relative;
-  width:70vw;
+  /* Respirações verticais: 3rem em cima e 3rem embaixo */
+  margin: 3rem 0;
+
+  /* Se quiser que ocupe metade da tela (50vw) e fique centralizado: */
+  width: 60vw;
   max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Visual */
   border-radius: 50px;
   background-color: #f9f9f9;
   padding: 4rem 0;
+
+  /* Layout interno */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 
 .publico-alvo-section h2 {
   font-size: 2rem;

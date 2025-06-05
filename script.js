@@ -23,3 +23,27 @@ function inicializarMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   inicializarMenu();
 });
+
+// ---------------------------
+  // Alternar Tema Claro/Escuro
+  // ---------------------------
+  const btnTema = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Se o usuário já tiver salvo “modo-escuro = ativo”, ligamos automaticamente
+  if (localStorage.getItem("modo-escuro") === "ativo") {
+    body.classList.add("dark-mode");
+    btnTema.textContent = "☀️";
+  }
+
+  btnTema.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      btnTema.textContent = "☀️";
+      localStorage.setItem("modo-escuro", "ativo");
+    } else {
+      btnTema.textContent = "🌙";
+      localStorage.setItem("modo-escuro", "inativo");
+    }
+  });

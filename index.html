@@ -11,31 +11,34 @@
 <body>
   <!-- ========== CABEÇALHO ========== -->
   <header class="header">
-  <div class="logo-container">
-    <img src="logo.png" alt="Logo Savers" class="logo-img" />
-    <div class="logo-text-block">
-      <span class="logo-title">SAVERS</span>
-      <span class="logo-subtitle">Conectando Pessoas, Salvando Vidas</span>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Savers" class="logo-img" />
+      <div class="logo-text-block">
+        <span class="logo-title">SAVERS</span>
+        <span class="logo-subtitle">Conectando Pessoas, Salvando Vidas</span>
+      </div>
     </div>
-  </div>
 
-  <nav class="nav-menu">
-    <ul>
-      <li><a href="#" data-target="hero">Início</a></li>
-      <li><a href="#" data-target="objetivos">Objetivos</a></li>
-      <li><a href="#" data-target="solucao">Solução</a></li>
-      <li><a href="#" data-target="publico-alvo">Público alvo</a></li>
-      <li><a href="#" data-target="beneficio">Benefício</a></li>
-      <li><a href="#" data-target="funcionalidades-principais">Funcionalidades principais</a></li>
-      <li><a href="#" data-target="contato">Contato</a></li>
-    </ul>
-  </nav>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" data-target="hero">Início</a></li>
+        <li><a href="#" data-target="objetivos">Objetivos</a></li>
+        <li><a href="#" data-target="solucao">Solução</a></li>
+        <li><a href="#" data-target="publico-alvo">Público alvo</a></li>
+        <li><a href="#" data-target="beneficio">Benefício</a></li>
+        <li><a href="#" data-target="funcionalidades-principais">Funcionalidades principais</a></li>
+        <!-- NOVO ITEM: QUIZ -->
+        <li><a href="#" data-target="quiz">Quiz</a></li>
+        <li><a href="#" data-target="contato">Contato</a></li>
+      </ul>
+    </nav>
 
-  <!-- Botão para alternar tema claro/escuro -->
-  <button id="theme-toggle" aria-label="Alternar tema" class="theme-toggle-btn">
-    🌙
-  </button>
-</header>
+    <!-- Botão para alternar tema claro/escuro -->
+    <button id="theme-toggle" aria-label="Alternar tema" class="theme-toggle-btn">
+      🌙
+    </button>
+  </header>
+
 
 
   <section id="hero" class="hero">
@@ -350,37 +353,53 @@
       </div>
     </section>
 
+    <!-- ========== SEÇÃO QUIZ ========== -->
+    <section id="quiz" class="section quiz-section">
+      <h2>Quiz sobre Enchentes:</h2>
+      <div id="quiz-container">
+        <!-- Aqui o JavaScript injetará as perguntas e opções -->
+      </div>
+      <div id="quiz-controls">
+        <button id="prev-btn" disabled>Anterior</button>
+        <button id="next-btn">Próxima</button>
+        <button id="submit-btn" style="display:none;">Enviar</button>
+      </div>
+      <div id="quiz-result" style="display:none;">
+        <h3>Você acertou <span id="score"></span> de 10 questões!</h3>
+      </div>
+    </section>
 
     <!-- ========== SEÇÃO CONTATO ========== -->
-<section id="contato" class="section contato-section">
-  <!-- Texto de introdução (título maior) -->
-  <h2>
-    Savers não é apenas uma solução tecnológica: é um movimento comunitário que salva vidas de maneira coordenada,
-    eficiente e segura. Juntos, transformamos solidariedade em ação estruturada.
-  </h2>
+    <section id="contato" class="section contato-section">
+      <!-- Texto de introdução (título maior) -->
+      <h2>
+        Savers não é apenas uma solução tecnológica: é um movimento comunitário que salva vidas de maneira coordenada,
+        eficiente e segura. Juntos, transformamos solidariedade em ação estruturada.
+      </h2>
 
-  <div class="contato-info">
-    <!-- Coluna da esquerda: dados de contato -->
-    <div class="contato-item">
-      <p>WhatsApp: (11) 90882-1234</p>
-      <p>Email: gssavers@gmail.com</p>
-      <p>Instagram: @gssavers123</p>
-      <p>LinkedIn: gssavers</p>
-    </div>
+      <div class="contato-info">
+        <!-- Coluna da esquerda: dados de contato -->
+        <div class="contato-item">
+          <p>WhatsApp: (11) 90882-1234</p>
+          <p>Email: gssavers@gmail.com</p>
+          <p>Instagram: @gssavers123</p>
+          <p>LinkedIn: gssavers</p>
+        </div>
 
-    <!-- Coluna da direita: “Envie um feedback” -->
-    <div class="contato-form">
-      <label for="feedback">Envie um feedback:</label>
-      <div class="feedback-box">
-        <textarea id="feedback" placeholder="Digite aqui uma mensagem"></textarea>
-        <!-- Use qualquer ícone de “enviar” (►, ➤ ou um SVG/Font Awesome) -->
-        <button type="button" aria-label="Enviar">
-          ►
-        </button>
+        <!-- Coluna da direita: “Envie um feedback” -->
+        <div class="contato-form">
+          <label for="feedback">Envie um feedback:</label>
+          <div class="feedback-box">
+            <textarea id="feedback" placeholder="Digite aqui uma mensagem"></textarea>
+            <!-- Use qualquer ícone de “enviar” (►, ➤ ou um SVG/Font Awesome) -->
+            <button type="button" aria-label="Enviar">
+              ►
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
 
   </main>
 

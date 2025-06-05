@@ -1066,3 +1066,106 @@ body.dark-mode .contato-form textarea {
 body.dark-mode a {
   color: #68A0CF;
 }
+/* ============================= */
+/* ESTILOS ESPECÍFICOS: Quiz     */
+/* ============================= */
+.quiz-section {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  margin: 3rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #111;
+  text-align: center;
+}
+
+/* Container da pergunta */
+.quiz-question {
+  margin-bottom: 1.5rem;
+}
+/* Texto da pergunta */
+.quiz-question p {
+  font-size: 1.125rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Lista de opções */
+.quiz-options {
+  list-style: none;
+  padding: 0;
+}
+.quiz-options li {
+  margin-bottom: 0.75rem;
+}
+.quiz-options input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Botões de controle */
+#quiz-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+#quiz-controls button {
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#quiz-controls button:disabled {
+  background-color: #cccccc;
+  cursor: default;
+}
+#quiz-controls button:hover:enabled {
+  background-color: #005f99;
+}
+
+/* Resultado do quiz */
+#quiz-result {
+  text-align: center;
+  margin-top: 2rem;
+}
+#quiz-result h3 {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE: Quiz          */
+/* ============================= */
+@media (max-width: 768px) {
+  .quiz-section {
+    width: 95vw;
+    padding: 1.5rem 1rem;
+  }
+  .quiz-section h2 {
+    font-size: 1.5rem;
+  }
+  .quiz-options li {
+    font-size: 0.95rem;
+  }
+  #quiz-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  #quiz-controls button {
+    width: 100%;
+  }
+}

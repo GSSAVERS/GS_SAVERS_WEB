@@ -16,6 +16,7 @@ body {
   background-color: #757575;
 }
 
+
 /* ========== CABEÇALHO ========== */
 .header {
   display: flex;
@@ -535,26 +536,6 @@ body {
   color: #222;
 }
 
-/* ============================================= */
-/*  Cartão específico: Alerta de Emergência em coluna */
-/* ============================================= */
-/*
-   No seu HTML, encontre o cartão “Alerta de Emergência” e troque:
-      <div class="funcionalidade-card"> 
-   por:
-      <div class="funcionalidade-card alerta-card">
-  
-   Além disso, dentro dele troque:
-      <div class="funcionalidade-card-icon">
-      …
-      </div>
-   por:
-      <div class="funcionalidade-card-icon alerta-icon">
-      …
-      </div>
-
-   Dessa forma, o CSS abaixo só se aplica a esse cartão específico.
-*/
 .alerta-card {
   /* Continua sendo um flex container, mas agora alinhado ao topo */
   display: flex;
@@ -889,4 +870,199 @@ body {
   .publico-alvo-card-text p {
     font-size: 0.825rem;
   }
+}
+
+/* ============================= */
+/* BOTÃO DE ALTERNAR TEMA (Cabeçalho) */
+/* ============================= */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  color: #007ACC;
+}
+
+body.dark-mode .theme-toggle-btn {
+  color: #ECECEC;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  color: #68A0CF;
+}
+
+/* ============================================================
+   BLOCO DE REGRAS PARA “MODO ESCURO” 
+   Quando <body> tiver a classe .dark-mode, aplica estes ajustes.
+   ============================================================ */
+body.dark-mode {
+  background-color: #1E1E1E;
+  color: #ECECEC;
+}
+
+/* Cabeçalho */
+body.dark-mode .header {
+  background-color: #2C2C2C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .logo-title,
+body.dark-mode .logo-subtitle,
+body.dark-mode .nav-menu a {
+  color: #ECECEC;
+}
+
+body.dark-mode .nav-menu a:hover {
+  color: #68A0CF;
+}
+
+/* Hero */
+body.dark-mode .hero {
+  background-color: #000;
+}
+
+body.dark-mode .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .hero-text-container {
+  background-color: rgba(30, 30, 30, 0.85);
+}
+
+body.dark-mode .hero-text-container h1,
+body.dark-mode .hero-text-container p {
+  color: #ECECEC;
+}
+
+/* Objetivos */
+body.dark-mode .objetivos-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .objetivos-section h2,
+body.dark-mode .objetivos-section p,
+body.dark-mode .objetivo-card p {
+  color: #ECECEC;
+}
+
+body.dark-mode .objetivo-card {
+  background-color: #3A3A3A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Solução */
+body.dark-mode .solucao-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .solucao-section h2,
+body.dark-mode .solucao-section p {
+  color: #ECECEC;
+}
+
+body.dark-mode .solucao-cards-container {
+  background-color: #333333;
+}
+
+body.dark-mode .solucao-card {
+  background-color: #3A3A3A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .solucao-card-text h3,
+body.dark-mode .solucao-card-text p {
+  color: #ECECEC;
+}
+
+/* Público Alvo */
+body.dark-mode .publico-alvo-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .publico-alvo-section h2 {
+  color: #ECECEC;
+}
+
+body.dark-mode .publico-alvo-cards-container {
+  background-color: #333333;
+}
+
+body.dark-mode .publico-alvo-card {
+  background-color: #3A3A3A;
+}
+
+body.dark-mode .publico-alvo-card-text h3,
+body.dark-mode .publico-alvo-card-text p {
+  color: #ECECEC;
+}
+
+/* Benefícios */
+body.dark-mode .beneficio-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .beneficio-section h2 {
+  color: #ECECEC;
+}
+
+body.dark-mode .beneficio-card {
+  background-color: #3A3A3A;
+}
+
+body.dark-mode .beneficio-card p {
+  color: #ECECEC;
+}
+
+/* Funcionalidades */
+body.dark-mode .funcionalidades-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .funcionalidades-section h2 {
+  color: #ECECEC;
+}
+
+body.dark-mode .funcionalidade-card {
+  background-color: #333333;
+}
+
+body.dark-mode .funcionalidade-card-text h3,
+body.dark-mode .funcionalidade-card-text p {
+  color: #ECECEC;
+}
+
+/* Contato */
+body.dark-mode .contato-section {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .contato-section h2 {
+  color: #ECECEC;
+}
+
+body.dark-mode .contato-item p {
+  color: #ECECEC;
+}
+
+body.dark-mode .feedback-box {
+  background-color: #3A3A3A;
+}
+
+body.dark-mode .contato-form label {
+  color: #ECECEC;
+}
+
+body.dark-mode .contato-form textarea {
+  color: #ECECEC;
+  background-color: transparent;
+}
+
+/* Links gerais (modo escuro) */
+body.dark-mode a {
+  color: #68A0CF;
 }

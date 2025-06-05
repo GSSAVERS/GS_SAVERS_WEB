@@ -16,7 +16,6 @@ body {
   background-color: #757575;
 }
 
-
 /* ========== CABEÇALHO ========== */
 .header {
   display: flex;
@@ -36,11 +35,11 @@ body {
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-right: 0.5rem;
+  height: 90px;    /* define uma altura “ideal” para a logo */
+  width: auto;     /* largura proporcional */
+  margin-right: 1rem;
 }
+
 
 .logo-text-block {
   display: flex;
@@ -121,21 +120,19 @@ body {
   margin-bottom: 0.75rem;
   text-align: justify;
 }
+
 /* ============================
    DECORAÇÃO DO HERO (Rectangle atrás do texto)
    ============================ */
 .hero-rectangle {
   position: absolute;
-  /* ajuste de acordo com seu layout: 
-     aqui vamos centralizar verticalmente e alinhar à direita */
   top: 30%;
-  right: 55%;               /* mantém o mesmo padding-right do .hero-overlay */
+  right: 55%;
   transform: translateY(-50%);
   height: 90vw;
-  width: 90vw;               /* 40% da largura da viewport */
-  max-width: 500px;          
-  
-  z-index: 0;                
+  width: 90vw;
+  max-width: 500px;
+  z-index: 0;
 }
 
 /* Garantir que o texto fique por cima do svg */
@@ -143,7 +140,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 
 /* ========== CONTEÚDO PRINCIPAL ========== */
 .main-content {
@@ -185,14 +181,11 @@ body {
   transform: translateX(-50%);
   width: 90vw;
   max-width: 100vw;
-
   background-color: #f0f0f0;
   border-radius: 1.5rem;
-
   padding: 3rem 1.5rem;
   margin: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -252,14 +245,11 @@ body {
   transform: translateX(-50%);
   width: 98vw;
   max-width: 100vw;
-
   background-color: #bbbbbb;
   border-radius: 1rem;
-
   padding: 4rem 2rem;
   margin: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -286,13 +276,11 @@ body {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 2rem;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -307,7 +295,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   flex: 1;
   min-height: 240px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -342,26 +329,18 @@ body {
 /* ESTILOS ESPECÍFICOS: Público Alvo */
 /* ============================= */
 .publico-alvo-section {
-  /* Respirações verticais: 3rem em cima e 3rem embaixo */
   margin: 3rem 0;
-
-  /* Se quiser que ocupe metade da tela (50vw) e fique centralizado: */
   width: 60vw;
   max-width: 90vw;
   margin-left: auto;
   margin-right: 35%;
-
-  /* Visual */
   border-radius: 50px;
   background-color: #f9f9f9;
   padding: 4rem 0;
-
-  /* Layout interno */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 
 .publico-alvo-section h2 {
   font-size: 2rem;
@@ -375,11 +354,9 @@ body {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 2rem;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-
   max-width: 1000px;
   width: calc(100% - 4rem);
   margin-left: 2rem;
@@ -464,58 +441,42 @@ body {
 /* ESTILOS ESPECÍFICOS: Funcionalidades */
 /* ============================= */
 .funcionalidades-section {
-  /* ======================================================
-     Faz o bloco branco ocupar 100% da largura da viewport
-     e centraliza-o horizontalmente, mantendo o border-radius
-     quase colado à borda da tela.
-  ====================================================== */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 98vw;
   max-width: 100vw;
-
-  background-color: #ffffff;  /* fundo branco para o bloco inteiro */
-  border-radius: 1rem;        /* cantos arredondados em todo o bloco */
-  padding: 2rem 2rem 3rem;    /* 2rem topo e laterais, 3rem embaixo */
-  margin: 2rem 0;             /* espaçamento acima/abaixo em relação às outras seções */
-
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem 2rem 3rem;
+  margin: 2rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Título dentro do bloco branco — colado no topo, mas com 2rem de margem esquerda */
 .funcionalidades-section h2 {
   font-size: 2rem;
-  margin: 0 0 2rem 2rem;   /* 2rem de recuo na esquerda, 2rem de espaçamento abaixo */
+  margin: 0 0 2rem 2rem;
   color: #111;
   text-align: left;
 }
 
-/* Container de cards, em grid de duas colunas */
 .funcionalidades-cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-
-  /* Para que o grid não fique colado demais do lado esquerdo,
-     adicionamos 2rem de padding interno (já definido no .funcionalidades-section).
-     Aqui, basta garantir que o grid ocupe 100% disponível. */
   width: 100%;
-  padding: 0 2rem;  /* 2rem de recuo interno somente nas laterais do grid */
+  padding: 0 2rem;
 }
 
-/* Cada cartão */
 .funcionalidade-card {
-  background-color: #f9f9f9;  /* leve cinza para contrastar dentro do branco */
+  background-color: #f9f9f9;
   border-radius: 0.75rem;
   padding: 1.5rem;
-
   display: flex;
   align-items: flex-start;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Ícone de cada cartão */
 .funcionalidade-card-icon {
   width: 40px;
   height: 40px;
@@ -529,7 +490,6 @@ body {
   object-fit: contain;
 }
 
-/* Texto dentro do cartão */
 .funcionalidade-card-text h3 {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
@@ -537,20 +497,16 @@ body {
 }
 
 .alerta-card {
-  /* Continua sendo um flex container, mas agora alinhado ao topo */
   display: flex;
-  flex-direction: row;       /* Mantém o ícone à esquerda e o texto à direita */
-  align-items: flex-start;   /* Alinha ícone e texto ao topo do cartão */
-  gap: 1rem;                 /* Espaço entre ícone e texto */
-
-  /* O padding interno já vem de .funcionalidade-card, então não há necessidade de repetir */
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-/* Ícone grande (por exemplo, 120x120 ou 150x150 conforme ajuste) */
 .alerta-icon {
-  width: 50px;    /* ajuste para 120px, 150px ou 200px, conforme preferir */
+  width: 50px;
   height: 50px;
-  margin: 0;       /* Sem margin-right extra porque usamos gap */
+  margin: 0;
 }
 
 .alerta-icon img {
@@ -559,21 +515,11 @@ body {
   object-fit: contain;
 }
 
-/* Se quiser elevar ainda mais o texto, pode usar margin-top negativo:
-   .alerta-card .funcionalidade-card-text {
-     margin-top: -8px;
-   }
-   Mas, em geral, o align-items: flex-start já alinha ao topo.
-*/
-
 /* ============================= */
 /* RESPONSIVIDADE               */
 /* ============================= */
-
-/* Em telas médias (abaixo de 992px), quebra para 1 coluna */
 @media (max-width: 992px) {
   .funcionalidades-section {
-    /* Mantém o bloco branco esticado até as bordas, mas garante recuo interno menor */
     padding: 1.5rem 1.5rem 2.5rem;
   }
   .funcionalidades-section h2 {
@@ -584,11 +530,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
-    padding: 0 1.5rem;  /* recuo interno reduzido */
+    padding: 0 1.5rem;
   }
 }
 
-/* Em telas bem estreitas (abaixo de 576px), recuos internos ainda menores */
 @media (max-width: 576px) {
   .funcionalidades-section {
     padding: 1rem 1rem 2rem;
@@ -621,19 +566,19 @@ body {
 /* ESTILOS ESPECÍFICOS: Contato  */
 /* ============================= */
 .contato-section {
-  background-color: #e0e0e0;  /* cinza claro no fundo */
-  padding: 3rem 2rem;         /* reduzir um pouco o padding para ficar mais “compacto” */
+  background-color: #e0e0e0;
+  padding: 3rem 2rem;
   border-radius: 1rem;
   margin: 2rem 0;
   text-align: left;
-  height: 30vw;           /* texto todo alinhado à esquerda */
+  height: 30vw;
 }
 
 .contato-section h2 {
   font-size: 1.25rem;
   font-weight: 600;
   max-width: 900px;
-  margin: 0 auto 2rem;        /* centraliza horizontalmente e dá 2rem de espaço embaixo */
+  margin: 0 auto 2rem;
   color: #222;
   line-height: 1.4;
 }
@@ -643,12 +588,12 @@ body {
   display: flex;
   gap: 2rem;
   max-width: 1000px;
-  margin: 0 auto;             /* centraliza a área de contato dentro da seção */
+  margin: 0 auto;
 }
 
 /* ========== COLUNA DA ESQUERDA (DADOS DE CONTATO) ========== */
 .contato-item {
-  flex: 1;                     /* ocupa metade do espaço */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -663,14 +608,13 @@ body {
 
 /* ========== COLUNA DA DIREITA (FEEDBACK) ========== */
 .contato-form {
-  flex: 1;                     /* ocupa a outra metade do espaço */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
 }
 
-/* Rótulo “Envie um feedback:” */
 .contato-form label {
   font-size: 1rem;
   font-weight: 500;
@@ -682,8 +626,8 @@ body {
   position: relative;
   width: 100%;
   background-color: #ffffff;
-  border-radius: 2rem;         /* bordas muito arredondadas para formar “pílula” */
-  padding: 0.5rem 1rem;        /* espaço interno, vertical:0.5rem, horizontal:1rem */
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
 }
@@ -699,14 +643,14 @@ body {
   font-size: 0.95rem;
   color: #333;
   line-height: 1.4;
-  padding-right: 2.5rem;       /* espaço para não bater no botão */
-  min-height: 3rem;            /* altura mínima para ficar “chatinha” como no exemplo */
+  padding-right: 2.5rem;
+  min-height: 3rem;
 }
 
 /* Botão de enviar (ícone) posicionado sobre a borda direita do .feedback-box */
 .contato-form button {
   position: absolute;
-  right: 1rem;                 /* distancia 1rem da borda direita do .feedback-box */
+  right: 1rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -715,7 +659,6 @@ body {
   transition: color 0.2s;
 }
 
-/* Ao passar o mouse sobre o ícone, fica um pouco mais escuro */
 .contato-form button:hover {
   color: #333;
 }
@@ -743,16 +686,15 @@ body {
     margin-bottom: 1rem;
   }
   .contato-item p {
-    font-size: 0. ninerem;
+    font-size: 0.9rem;
   }
   .contato-form label {
-    font-size: 0. ninerem;
+    font-size: 0.9rem;
   }
   .contato-form textarea {
-    font-size: 0. ninerem;
+    font-size: 0.9rem;
   }
 }
-
 
 /* ============================= */
 /* RESPONSIVIDADE GERAL          */
@@ -897,7 +839,7 @@ body.dark-mode .theme-toggle-btn:hover {
 }
 
 /* ============================================================
-   BLOCO DE REGRAS PARA “MODO ESCURO” 
+   BLOCO DE REGRAS PARA “MODO ESCURO”
    Quando <body> tiver a classe .dark-mode, aplica estes ajustes.
    ============================================================ */
 body.dark-mode {
@@ -1066,6 +1008,7 @@ body.dark-mode .contato-form textarea {
 body.dark-mode a {
   color: #68A0CF;
 }
+
 /* ============================= */
 /* ESTILOS ESPECÍFICOS: Quiz     */
 /* ============================= */
@@ -1089,35 +1032,35 @@ body.dark-mode a {
   text-align: center;
 }
 
-/* Container da pergunta */
 .quiz-question {
   margin-bottom: 1.5rem;
 }
-/* Texto da pergunta */
+
 .quiz-question p {
   font-size: 1.125rem;
   color: #222;
   margin-bottom: 1rem;
 }
 
-/* Lista de opções */
 .quiz-options {
   list-style: none;
   padding: 0;
 }
+
 .quiz-options li {
   margin-bottom: 0.75rem;
 }
+
 .quiz-options input[type="radio"] {
   margin-right: 0.5rem;
 }
 
-/* Botões de controle */
 #quiz-controls {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
+
 #quiz-controls button {
   background-color: #007ACC;
   color: white;
@@ -1128,19 +1071,21 @@ body.dark-mode a {
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 #quiz-controls button:disabled {
   background-color: #cccccc;
   cursor: default;
 }
+
 #quiz-controls button:hover:enabled {
   background-color: #005f99;
 }
 
-/* Resultado do quiz */
 #quiz-result {
   text-align: center;
   margin-top: 2rem;
 }
+
 #quiz-result h3 {
   font-size: 1.5rem;
   color: #111;
